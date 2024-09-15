@@ -1,0 +1,114 @@
+/* Full-page background */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8; /* Choose your desired background color */
+}
+
+/* Container styling */
+.admin-product-list-container {
+  padding: 2rem;
+  /* Full background color */
+  border-radius: 10px;
+  
+  min-height: 100vh; /* Ensures the container takes full viewport height */
+}
+
+/* Card styling */
+.admin-product-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.product-image {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.admin-product-card:hover .product-image {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Title and text styling */
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Admin actions styling */
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Button styling */
+.update-btn, .delete-btn {
+  width: 45%;
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Update button colors */
+.update-btn {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+}
+
+.update-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Delete button colors */
+.delete-btn {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Animation for smooth hover effects */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.admin-product-card {
+  animation: fadeInUp 0.6s ease forwards;
+}

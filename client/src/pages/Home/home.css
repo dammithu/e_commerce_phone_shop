@@ -1,0 +1,97 @@
+/* General Homepage Styles */
+.homepage {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./image5.jpg') no-repeat center center/cover;
+  color: #fff;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); 
+  z-index: 1;
+}
+
+
+.content-section {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0;
+}
+
+.shop-info {
+  max-width: 500px;
+}
+
+.shop-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+.shop-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #dcdcdc;
+}
+
+.product-btn {
+  padding: 12px 40px;
+  font-size: 1.2rem;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-btn:hover {
+  background-color: #ff7043;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+
+.promo-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.promo-image:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .shop-title {
+    font-size: 2.5rem;
+  }
+
+  .shop-description {
+    font-size: 1rem;
+  }
+
+  .promo-image {
+    max-width: 300px;
+  }
+}

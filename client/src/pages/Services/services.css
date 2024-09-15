@@ -1,0 +1,139 @@
+/* Global Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Ensure there's no default margin affecting layout */
+}
+
+/* Remove the gap between navbar and services section */
+body {
+    margin: 0; /* Ensure no extra margin is applied */
+}
+
+.services-container {
+    padding: 60px;
+    background: #f8f9fa; /* Light background color for the section */
+}
+
+/* Services Header */
+.services-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-header h1 {
+    font-size: 3rem;
+    color: #343a40;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.services-header p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Services Info Section */
+.services-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.service-item {
+    background: #ffffff; /* White background for each service item */
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 320px; /* Increased max-width for better readability */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-item i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service-item h2 {
+    font-size: 1.6rem;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+/* Service Details Section */
+.service-details {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.service-details h3 {
+    font-size: 1.4rem;
+    color: #343a40;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.service-details p {
+    font-size: 1rem;
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+/* Font Awesome Icons */
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-header h1 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+
+    .services-header p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+
+    .services-info {
+        gap: 15px; /* Reduced gap for smaller screens */
+    }
+
+    .service-item {
+        max-width: 100%; /* Full width for smaller screens */
+        padding: 15px; /* Adjusted padding for better space usage */
+    }
+
+    .service-item i {
+        font-size: 1.5rem; /* Smaller icon size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-header h1 {
+        font-size: 1.8rem; /* Further reduced font size */
+    }
+
+    .services-header p {
+        font-size: 0.9rem; /* Further reduced font size */
+    }
+
+    .service-item i {
+        font-size: 1.2rem; /* Further reduced icon size */
+    }
+}

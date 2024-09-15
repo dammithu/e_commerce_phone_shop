@@ -1,0 +1,65 @@
+.successful-container {
+  margin-top: 50px;
+}
+
+.successful-card {
+  padding: 30px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f7f7f7, #e0e0e0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.successful-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.title-animate {
+  font-size: 26px;
+  color: #28a745;
+  animation: fadeInDown 0.6s ease-in-out;
+}
+
+.message-animate {
+  font-size: 18px;
+  color: #495057;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.back-btn {
+  font-size: 18px;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

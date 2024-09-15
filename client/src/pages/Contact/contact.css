@@ -1,0 +1,153 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.contact-container {
+  padding: 60px;
+  background: #f8f9fa; 
+}
+
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  color: #343a40;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.contact-item h2 {
+  font-size: 1.6rem;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+
+.contact-details {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+  font-size: 2.2rem;
+  color: #343a40;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contact-details p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  line-height: 1.8;
+}
+
+
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+
+@media (max-width: 768px) {
+  .contact-header h1 {
+      font-size: 2rem; 
+  }
+
+  .contact-header p {
+      font-size: 1rem;
+  }
+
+  .contact-info {
+      gap: 15px;
+  }
+
+  .contact-item {
+      max-width: 100%; 
+      padding: 15px;
+  }
+
+  .contact-item i {
+      font-size: 1.5rem;
+  }
+
+  .contact-details {
+      padding: 20px; 
+  }
+
+  .contact-details h2 {
+      font-size: 1.8rem;
+  }
+
+  .contact-details p {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header h1 {
+      font-size: 1.8rem; 
+  }
+
+  .contact-header p {
+      font-size: 0.9rem; 
+  }
+
+  .contact-item i {
+      font-size: 1.2rem; 
+  }
+
+  .contact-details h2 {
+      font-size: 1.6rem; 
+  }
+}
