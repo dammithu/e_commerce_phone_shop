@@ -24,7 +24,7 @@ function Payment() {
     }
 
     try {
-      const response = await fetch(`http://localhost:3001/updatepayment/${orderId}`, {
+      const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/updatepayment/${orderId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

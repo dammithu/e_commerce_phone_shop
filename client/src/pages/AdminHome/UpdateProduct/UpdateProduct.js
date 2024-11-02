@@ -17,7 +17,7 @@ function UpdateProduct() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/product/${productId}`);
+        const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/product/${productId}`);
         if (!response.ok) {
           throw new Error('Product not found');
         }
@@ -39,7 +39,7 @@ function UpdateProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3001/product/${productId}`, {
+      const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/product/${productId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

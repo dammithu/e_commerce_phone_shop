@@ -53,7 +53,7 @@ function AdminLogin() {
 
     // If validation passes, proceed with API call
     axios
-      .post("http://localhost:3001/adminlogin", { userName, password })
+      .post(`${process.env.REACT_APP_BE_BASE_URI}/adminlogin`, { userName, password })
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {

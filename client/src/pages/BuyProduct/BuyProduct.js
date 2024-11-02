@@ -15,7 +15,7 @@ function BuyProduct() {
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/product/${productId}`);
+        const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/product/${productId}`);
         const data = await response.json();
         if (response.ok) {
           setProduct(data);
@@ -52,7 +52,7 @@ function BuyProduct() {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/addorder', {
+      const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/addorder`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

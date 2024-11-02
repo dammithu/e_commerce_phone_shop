@@ -11,7 +11,7 @@ function UserList() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:3001/users');
+        const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/users`);
         if (!response.ok) {
           throw new Error('Failed to fetch users');
         }
@@ -29,7 +29,7 @@ function UserList() {
 
   const handleDelete = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:3001/user/${userId}`, {
+      const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/user/${userId}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

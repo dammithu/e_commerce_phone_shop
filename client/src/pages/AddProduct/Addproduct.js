@@ -42,7 +42,7 @@ function AddProduct() {
     formData.append("description", description);
 
     try {
-      const response = await fetch('http://localhost:3001/addproduct', {
+      const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/addproduct`, {
         method: 'POST',
         body: formData,
       });

@@ -21,7 +21,7 @@ function UserProfile() {
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser && storedUser._id) {
-      fetch(`http://localhost:3001/user/${storedUser._id}`)
+      fetch(`${process.env.REACT_APP_BE_BASE_URI}/user/${storedUser._id}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
@@ -45,7 +45,7 @@ function UserProfile() {
   const handleSave = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser && storedUser._id) {
-      fetch(`http://localhost:3001/user/${storedUser._id}`, {
+      fetch(`${process.env.REACT_APP_BE_BASE_URI}/user/${storedUser._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

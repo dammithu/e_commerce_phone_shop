@@ -4,15 +4,16 @@ const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
+require('dotenv').config();
 
 // Initialize Express app
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Connect to MongoDB
+// .connect("mongodb://localhost:27017/myshop", {
 mongoose
-  .connect("mongodb://localhost:27017/myshop", {
+  .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

@@ -72,7 +72,7 @@ function Signup() {
 
     
     axios
-      .post("http://localhost:3001/signup", { name, email, password })
+      .post(`${process.env.REACT_APP_BE_BASE_URI}/signup`, { name, email, password })
       .then((result) => {
         console.log(result);
         Swal.fire({

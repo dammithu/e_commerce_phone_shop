@@ -13,7 +13,7 @@ function ProductList() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:3001/products');
+        const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/products`);
         const data = await response.json();
         setProducts(data);
       } catch (err) {
@@ -75,7 +75,7 @@ function ProductList() {
             <Card className="product-card h-100">
               <Card.Img
                 variant="top"
-                src={`http://localhost:3001/uploads/${product.image}`}
+                src={`${process.env.REACT_APP_BE_BASE_URI}/uploads/${product.image}`}
                 alt={product.productName}
                 className="product-image"
               />

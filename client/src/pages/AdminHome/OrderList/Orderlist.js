@@ -16,7 +16,7 @@ function Orderlist() {
     
 
       try {
-        const response = await fetch(`http://localhost:3001/orderlist`);
+        const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/orderlist`);
         if (response.ok) {
           const data = await response.json();
           setOrders(data);

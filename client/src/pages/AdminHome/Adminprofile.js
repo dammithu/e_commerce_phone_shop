@@ -17,7 +17,7 @@ function AdminProfile() {
   useEffect(() => {
     const storedAdmin = JSON.parse(localStorage.getItem("admin"));
     if (storedAdmin && storedAdmin.userName) {
-      fetch(`http://localhost:3001/admin/${storedAdmin.userName}`)
+      fetch(`${process.env.REACT_APP_BE_BASE_URI}/admin/${storedAdmin.userName}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
@@ -41,7 +41,7 @@ function AdminProfile() {
   const handleSave = () => {
     const storedAdmin = JSON.parse(localStorage.getItem("admin"));
     if (storedAdmin && storedAdmin.userName) {
-      fetch(`http://localhost:3001/admin/${storedAdmin.userName}`, {
+      fetch(`${process.env.REACT_APP_BE_BASE_URI}/admin/${storedAdmin.userName}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

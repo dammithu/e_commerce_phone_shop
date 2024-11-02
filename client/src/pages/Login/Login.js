@@ -55,7 +55,7 @@ function Login() {
 
    
     axios
-      .post("http://localhost:3001/login", { email, password })
+      .post(`${process.env.REACT_APP_BE_BASE_URI}/login`, { email, password })
       .then((result) => {
         if (result.data.message === "Success") {
          

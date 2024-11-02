@@ -19,7 +19,7 @@ function MyOrders() {
       }
 
       try {
-        const response = await fetch(`http://localhost:3001/myorders?userId=${user._id}`);
+        const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/myorders?userId=${user._id}`);
         if (response.ok) {
           const data = await response.json();
           setOrders(data);

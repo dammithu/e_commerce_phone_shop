@@ -11,7 +11,7 @@ function AdminProduct() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:3001/products');
+        const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/products`);
         const data = await response.json();
         setProducts(data);
       } catch (err) {
@@ -24,7 +24,7 @@ function AdminProduct() {
 
   const handleDelete = async (productId) => {
     try {
-      const response = await fetch(`http://localhost:3001/product/${productId}`, {
+      const response = await fetch(`${process.env.REACT_APP_BE_BASE_URI}/product/${productId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -49,7 +49,7 @@ function AdminProduct() {
             <Card className="admin-product-card">
               <Card.Img
                 variant="top"
-                src={`http://localhost:3001/uploads/${product.image}`}
+                src={`${process.env.REACT_APP_BE_BASE_URI}/uploads/${product.image}`}
                 alt={product.productName}
                 className="product-image"
               />
